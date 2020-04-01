@@ -20,7 +20,7 @@
     "packageInfo": {
       "name": "alibabacloud/endpoint-util",
       "desc": "Alibaba Cloud Endpoint Library for PHP",
-      "github": "https://github.com/aliyun/alibabacloud-endpoint"
+      "github": "https://github.com/aliyun/endpoint-util"
     }
   },
   "java": {
