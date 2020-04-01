@@ -1,0 +1,32 @@
+{
+  "scope": "alibabacloud",
+  "name": "EndpointUtil",
+  "version": "0.1.2",
+  "main": "./main.tea",
+  "maintainers": [
+    {
+      "name": "Alibaba Cloud SDK",
+      "email": "sdk-team@alibabacloud.com"
+    }
+  ],
+  "releases": {
+    "go": "github.com/aliyun/endpoint-util/golang/service:v0.0.1",
+    "php": "alibabacloud/endpoint-util:^0.1.0"
+  },
+  "php": {
+    "package": "AlibabaCloud.Endpoint",
+    "clientName": "Endpoint",
+    "packageInfo": {
+      "name": "alibabacloud/endpoint-util",
+      "desc": "Alibaba Cloud Endpoint Library for PHP",
+      "github": "https://github.com/aliyun/alibabacloud-endpoint"
+    }
+  },
+  "java": {
+    "package": "com.aliyun.endpointutil"
+  },
+  "csharp": {
+    "namespace": "AlibabaCloud.EndpointUtil",
+    "className": "Common"
+  }
+}

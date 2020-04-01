@@ -1,0 +1,15 @@
+node_modules
+*.beam
+*.pyc
+.vscode/
+target/
+.settings/
+.project
+.classpath
+.idea
+obj/
+*.iml
+python/**/__pycache__
+csharp/**/bin
+csharp/**/obj
+csharp/**/.vs
