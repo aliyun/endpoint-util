@@ -1,7 +1,7 @@
 {
   "scope": "alibabacloud",
   "name": "EndpointUtil",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "./main.tea",
   "maintainers": [
     {
@@ -13,7 +13,8 @@
     "go": "github.com/aliyun/endpoint-util/golang/service:v0.0.1",
     "php": "alibabacloud/endpoint-util:^0.1.0",
     "java": "com.aliyun:endpoint-util:0.0.3",
-    "csharp": "AlibabaCloud.EndpointUtil:0.1.1"
+    "csharp": "AlibabaCloud.EndpointUtil:0.1.1",
+    "ts": "@alicloud/endpoint-util:^0.0.1"
   },
   "php": {
     "package": "AlibabaCloud.Endpoint",
