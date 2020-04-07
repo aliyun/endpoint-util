@@ -15,6 +15,8 @@ public class Client {
         }
         if (null == suffix) {
             suffix = "";
+        } else {
+            suffix = "-" + suffix;
         }
         if (endpointType == "regional") {
             if (StringUtils.isEmpty(regionId)) {
