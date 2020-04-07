@@ -12,7 +12,7 @@ namespace AlibabaCloud.EndpointUtil
         /// <param name="regionId"></param>
         /// <param name="product"></param>
         /// <returns>endpoint string</returns>
-        public static string GetEndpointRules(string product, string regionId, string endpointType, string network)
+        public static string GetEndpointRules(string product, string regionId, string endpointType, string network, string suffix)
         {
             string result = string.Empty;
             product = product == null ? "" : product;
@@ -22,11 +22,11 @@ namespace AlibabaCloud.EndpointUtil
                 {
                     throw new ArgumentException("RegionId is empty, please set a valid RegionId", "RegionId");
                 }
-                result = "<product><network>.<region_id>.aliyuncs.com".Replace("<region_id>", regionId);
+                result = "<product><suffix><network>.<region_id>.aliyuncs.com".Replace("<region_id>", regionId);
             }
             else
             {
-                result = "<product><network>.aliyuncs.com";
+                result = "<product><suffix><network>.aliyuncs.com";
             }
 
             result = result.Replace("<product>", product.ToLower());
@@ -38,6 +38,15 @@ namespace AlibabaCloud.EndpointUtil
             else
             {
                 result = result.Replace("<network>", "-" + network);
+            }
+
+            if(string.IsNullOrEmpty(suffix))
+            {
+                result = result.Replace("<suffix>", "");
+            }
+            else
+            {
+                result = result.Replace("<suffix>", "-" + suffix);
             }
 
             return result;
