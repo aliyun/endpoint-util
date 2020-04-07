@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <RootNamespace>AlibabaCloud.EndpointUtil</RootNamespace>
-    <Version>0.0.1</Version>
+    <Version>0.1.1</Version>
     <Authors>Alibaba Cloud</Authors>
     <PackageTags>Alibaba Aliyun Endpoint Util</PackageTags>
     <Copyright>©2009-2019 Alibaba Cloud</Copyright>
@@ -43,7 +43,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Tea" Version="0.3.1" />
+    <PackageReference Include="Tea" Version="0.3.2" />
   </ItemGroup>
 
   <ItemGroup>

@@ -12,7 +12,8 @@
   "releases": {
     "go": "github.com/aliyun/endpoint-util/golang/service:v0.0.1",
     "php": "alibabacloud/endpoint-util:^0.1.0",
-    "java": "com.aliyun:endpoint-util:0.0.2"
+    "java": "com.aliyun:endpoint-util:0.0.2",
+    "csharp": "AlibabaCloud.EndpointUtil:0.1.1"
   },
   "php": {
     "package": "AlibabaCloud.Endpoint",
