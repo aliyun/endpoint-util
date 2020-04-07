@@ -9,7 +9,7 @@ public class ClientTest {
         new Client();
         Assert.assertEquals("cs.region.aliyuncs.com", Client.getEndpointRules("regional", "public",
                 "region", "cs", null));
-        Assert.assertEquals("cssuffix-test.aliyuncs.com", Client.getEndpointRules("", "test",
+        Assert.assertEquals("cs-suffix-test.aliyuncs.com", Client.getEndpointRules("", "test",
                 "region", "cs", "suffix"));
 
         try {
