@@ -8,28 +8,34 @@ package service
 import (
 	"fmt"
 	"strings"
+
+	"github.com/alibabacloud-go/tea/tea"
 )
 
-func GetEndpointRules(product string, regionId string, endpointType string, network string, suffix string) (_result string, _err error) {
-	if endpointType == "regional" {
-		if regionId == "" {
+func GetEndpointRules(product, regionId, endpointType, network, suffix *string) (_result *string, _err error) {
+	if tea.StringValue(endpointType) == "regional" {
+		if tea.StringValue(regionId) == "" {
 			_err = fmt.Errorf("RegionId is empty, please set a valid RegionId")
-			return "", _err
+			return tea.String(""), _err
 		}
-		_result = strings.Replace("<product><suffix><network>.<region_id>.aliyuncs.com", "<region_id>", regionId, 1)
+		_result = tea.String(strings.Replace("<product><suffix><network>.<region_id>.aliyuncs.com",
+			"<region_id>", tea.StringValue(regionId), 1))
 	} else {
-		_result = "<product><suffix><network>.aliyuncs.com"
+		_result = tea.String("<product><suffix><network>.aliyuncs.com")
 	}
-	_result = strings.Replace(_result, "<product>", strings.ToLower(product), 1)
-	if network == "" || network == "public" {
-		_result = strings.Replace(_result, "<network>", "", 1)
+	_result = tea.String(strings.Replace(tea.StringValue(_result),
+		"<product>", strings.ToLower(tea.StringValue(product)), 1))
+	if tea.StringValue(network) == "" || tea.StringValue(network) == "public" {
+		_result = tea.String(strings.Replace(tea.StringValue(_result), "<network>", "", 1))
 	} else {
-		_result = strings.Replace(_result, "<network>", "-"+network, 1)
+		_result = tea.String(strings.Replace(tea.StringValue(_result),
+			"<network>", "-"+tea.StringValue(network), 1))
 	}
-	if suffix == "" {
-		_result = strings.Replace(_result, "<suffix>", "", 1)
+	if tea.StringValue(suffix) == "" {
+		_result = tea.String(strings.Replace(tea.StringValue(_result), "<suffix>", "", 1))
 	} else {
-		_result = strings.Replace(_result, "<suffix>", "-"+suffix, 1)
+		_result = tea.String(strings.Replace(tea.StringValue(_result),
+			"<suffix>", "-"+tea.StringValue(suffix), 1))
 	}
 	return _result, nil
 }
