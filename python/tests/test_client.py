@@ -1,7 +1,7 @@
 import unittest
 
 from Tea.exceptions import RequiredArgumentException
-from endpoint_util import client
+from alibabacloudendpointutil import client
 
 
 class TestClient(unittest.TestCase):
