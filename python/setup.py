@@ -19,12 +19,12 @@ import os
 from setuptools import setup, find_packages
 
 """
-Setup module for alibabacloudendpointutil.
+Setup module for alibabacloud_endpoint_util.
 Created on 4/02/2020
 @author: Alibaba Cloud
 """
 
-PACKAGE = "alibabacloudendpointutil"
+PACKAGE = "alibabacloud_endpoint_util"
 DESCRIPTION = "The endpoint-util module of alibabaCloud Python SDK."
 AUTHOR = "Alibaba Cloud"
 AUTHOR_EMAIL = "alibaba-cloud-sdk-dev-team@list.alibaba-inc.com"
@@ -62,4 +62,4 @@ setup_args = {
     )
 }
 
-setup(name='alibabacloudendpointutil', **setup_args)
+setup(name='alibabacloud_endpoint_util', **setup_args)

@@ -15,7 +15,7 @@
     "java": "com.aliyun:endpoint-util:0.0.3",
     "csharp": "AlibabaCloud.EndpointUtil:0.1.1",
     "ts": "@alicloud/endpoint-util:^0.0.1",
-    "python": "alibabacloudendpointutil:0.0.1"
+    "python": "alibabacloud_endpoint_util:0.0.1"
   },
   "php": {
     "package": "AlibabaCloud.Endpoint",
@@ -34,7 +34,7 @@
     "className": "Common"
   },
   "python": {
-    "package": "alibabacloudendpointutil",
+    "package": "alibabacloud_endpoint_util",
     "className": "client"
   }
 }
