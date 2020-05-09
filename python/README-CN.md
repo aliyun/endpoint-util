@@ -13,7 +13,7 @@
 
 ```bash
 # 安装 endpoint-util
-pip install alibabacloud-endpoint-util
+pip install alibabacloud_endpoint_util
 ```
 
 ## 问题

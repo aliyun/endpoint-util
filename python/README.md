@@ -10,7 +10,7 @@ Python SDK uses a common package management tool named `pip`. If pip is not inst
 
 ```bash
 # Install the endpoint-util
-pip install alibabacloud-endpoint-util
+pip install alibabacloud_endpoint_util
 ```
 
 ## Issues
