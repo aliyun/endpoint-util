@@ -13,3 +13,4 @@ python/**/__pycache__
 csharp/**/bin
 csharp/**/obj
 csharp/**/.vs
+*.sum
