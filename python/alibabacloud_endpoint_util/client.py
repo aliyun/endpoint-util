@@ -3,7 +3,7 @@ from Tea.exceptions import RequiredArgumentException
 
 class Client:
     @staticmethod
-    def get_endpoint_rules(product, region_id, endpoint_type, network):
+    def get_endpoint_rules(product, region_id, endpoint_type, network, suffix=None):
         product = product or ""
         network = network or ""
         if endpoint_type == "regional":
