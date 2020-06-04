@@ -45,7 +45,7 @@ class Endpoint
         } else {
             $endpoint = self::render($endpoint, 'network', '');
         }
-        if ('' !== $suffix) {
+        if (!empty($suffix)) {
             $endpoint = self::render($endpoint, 'suffix', '-' . $suffix);
         } else {
             $endpoint = self::render($endpoint, 'suffix', '');
