@@ -6,7 +6,7 @@ import com.aliyun.tea.utils.StringUtils;
 
 public class Client {
 
-    public static String getEndpointRules(String endpointType, String netWork, String regionId, String product, String suffix) throws Exception {
+    public static String getEndpointRules(String product, String regionId, String endpointType, String netWork, String suffix) throws Exception {
         String result;
         if (!StringUtils.isEmpty(netWork) && netWork != "public") {
             netWork = "-" + netWork;
