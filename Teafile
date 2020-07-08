@@ -1,7 +1,7 @@
 {
   "scope": "alibabacloud",
   "name": "EndpointUtil",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "./main.tea",
   "maintainers": [
     {
@@ -35,6 +35,6 @@
   },
   "python": {
     "package": "alibabacloud_endpoint_util",
-    "className": "client"
+    "clientName": "client"
   }
 }
