@@ -1,12 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.endpointutil;
 
-import com.aliyun.tea.ValidateException;
 import com.aliyun.tea.utils.StringUtils;
 
 public class Client {
 
-    public static String getEndpointRules(String product, String regionId, String endpointType, String netWork, String suffix) throws Exception {
+    public static String getEndpointRules(String product, String regionId, String endpointType, String netWork, String suffix) {
         String result;
         if (!StringUtils.isEmpty(netWork) && netWork != "public") {
             netWork = "-" + netWork;
@@ -20,7 +19,7 @@ public class Client {
         }
         if (endpointType == "regional") {
             if (StringUtils.isEmpty(regionId)) {
-                throw new ValidateException("RegionId is empty, please set a valid RegionId");
+                throw new RuntimeException("RegionId is empty, please set a valid RegionId");
             }
             result = String.format("%s%s%s.%s.aliyuncs.com", product, suffix, netWork, regionId);
         } else {
