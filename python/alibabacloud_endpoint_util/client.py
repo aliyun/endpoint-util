@@ -8,7 +8,7 @@ class Client:
         network = network or ""
         if endpoint_type == "regional":
             if region_id is None or region_id == "":
-                raise RequiredArgumentException(
+                raise RuntimeError(
                     "RegionId is empty, please set a valid RegionId")
             result = "<product><network>.<region_id>.aliyuncs.com".replace(
                 "<region_id>", region_id)
