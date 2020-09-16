@@ -6,7 +6,7 @@ from alibabacloud_endpoint_util.client import Client
 
 class TestClient(unittest.TestCase):
     def test_get_endpoint_rules(self):
-        with self.assertRaises(RequiredArgumentException):
+        with self.assertRaises(RuntimeError):
             Client.get_endpoint_rules("ecs", "", "regional", "")
 
         self.assertEqual("ecs.cn-hangzhou.aliyuncs.com",
