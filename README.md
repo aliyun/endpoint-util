@@ -4,6 +4,9 @@ English | [简体中文](README-CN.md)
 
 ## Alibaba Cloud Endpoint Util
 
+[![Travis Build Status](https://travis-ci.org/aliyun/endpoint-util.svg?branch=master)](https://travis-ci.org/aliyun/endpoint-util)
+[![codecov](https://codecov.io/gh/aliyun/endpoint-util/branch/master/graph/badge.svg)](https://codecov.io/gh/aliyun/endpoint-util)
+
 ## Installation
 
 - [Go](./golang/README.md)
