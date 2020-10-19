@@ -1,7 +1,7 @@
 English | [简体中文](/README-zh-CN.md)
 
 
-# Alibabacloud Endpoint Util SDK for C++
+# Alibabacloud EndpointUtil SDK for C++
 
 ![](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
 
@@ -11,8 +11,8 @@ English | [简体中文](/README-zh-CN.md)
 ### Linux
 
 ```bash
-git clone https://github.com/alibabacloud-sdk-cpp/endpoint_util.git
-cd endpoint_util
+git clone https://github.com/alibabacloud-sdk-cpp/endpoint-util.git
+cd endpoint-util
 sh scripts/install.sh
 ```
 
@@ -21,7 +21,7 @@ sh scripts/install.sh
 1. Run the following command to clone code from Github via git-bash:
 
   ```bash
-  git clone https://github.com/alibabacloud-sdk-cpp/endpoint_util.git
+  git clone https://github.com/alibabacloud-sdk-cpp/endpoint-util.git
   ```
 2. Build Visual Studio solution
   * Change directory to source code and make directory `cmake_build`
@@ -32,7 +32,7 @@ sh scripts/install.sh
     * click `generate`, Generate VS solution
 
 3. Build and Install C++ SDK
-  * Go to the cmake_build directory and open alibabacloud_rpcutil.sln with Visual Studio Solutions
+  * Go to the cmake_build directory and open alibabacloud_endpoint_util.sln with Visual Studio Solutions
   * Select  `Release`
   * Check INSTALL option from Build -> Configuration Manager
   * Build->Build Solutions to build.
@@ -40,7 +40,7 @@ sh scripts/install.sh
 
 ## Issue
 
-[Submit Issue](https://github.com/alibabacloud-sdk-cpp/endpoint_util/issues/new/choose), Problems that do not meet the guidelines may close immediately.
+[Submit Issue](https://github.com/alibabacloud-sdk-cpp/endpoint-util/issues/new/choose), Problems that do not meet the guidelines may close immediately.
 
 
 ## Related
@@ -57,6 +57,6 @@ sh scripts/install.sh
 Copyright (c) 2009-present, Alibaba Cloud All rights reserved.
 
 [open-api]: https://api.aliyun.com
-[latest-release]: https://github.com/alibabacloud-sdk-cpp/endpoint_util/releases
+[latest-release]: https://github.com/alibabacloud-sdk-cpp/endpoint-util/releases
 [console]: https://home.console.aliyun.com
 [aliyun]: https://www.aliyun.com

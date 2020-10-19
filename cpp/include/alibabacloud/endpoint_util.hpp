@@ -1,18 +1,23 @@
-#ifndef CPP_INCLUDE_ALIBABACLOUD_ENDPOINTUTIL_H
-#define CPP_INCLUDE_ALIBABACLOUD_ENDPOINTUTIL_H
+#ifndef ALIBABACLOUD_ENDPOINTUTIL_H_
+#define ALIBABACLOUD_ENDPOINTUTIL_H_
 
-#include <boost/any.hpp>
-#include <darabonba/core.hpp>
-#include <map>
+#include <iostream>
+#include <memory>
 
+using namespace std;
 
-namespace Alibabacloud_endpoint_util {
-class Client
-{
+namespace Alibabacloud_EndpointUtil {
+class Client {
 public:
-  Client();
-  ~Client();
-  static string getEndpointRules(string *product, string *regionId, string *endpointType, string *network,string *suffix);
+  static string getEndpointRules(shared_ptr<string> product,
+                                 shared_ptr<string> regionId,
+                                 shared_ptr<string> endpointType,
+                                 shared_ptr<string> network,
+                                 shared_ptr<string> suffix);
+
+  Client() {};
+  ~Client() {};
 };
-}
-#endif //CPP_INCLUDE_ALIBABACLOUD_ENDPOINTUTIL_H
+} // namespace Alibabacloud_EndpointUtil
+
+#endif
