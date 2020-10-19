@@ -1,9 +1,8 @@
 #include "gtest/gtest.h"
 #include <alibabacloud/endpoint_util.hpp>
-#include <iostream>
+#include <memory>
 
 using namespace std;
-using namespace Alibabacloud_endpoint_util;
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
@@ -13,12 +12,12 @@ int main(int argc, char **argv) {
 
 TEST(tests, getEndpointRules) {
   try{
-    Client::getEndpointRules(
-        new string("ecs"),
-        new string(""),
-        new string("regional"),
-        new string(""),
-        nullptr);
+    Alibabacloud_EndpointUtil::Client::getEndpointRules(
+        make_shared<string>("ecs"),
+        make_shared<string>(""),
+        make_shared<string>("regional"),
+        make_shared<string>(),
+        make_shared<string>());
     throw exception();
   } catch (runtime_error& err) {
     ASSERT_EQ(string("RegionId is empty, please set a valid RegionId"), err.what());
@@ -26,51 +25,51 @@ TEST(tests, getEndpointRules) {
 
   ASSERT_EQ(
       "ecs.cn-hangzhou.aliyuncs.com",
-      Client::getEndpointRules(
-          new string("ecs"),
-          new string("cn-hangzhou"),
-          new string("regional"),
-          new string(""),
-          nullptr)
+      Alibabacloud_EndpointUtil::Client::getEndpointRules(
+          make_shared<string>("ecs"),
+          make_shared<string>("CN-hangzhou"),
+          make_shared<string>("regional"),
+          make_shared<string>(""),
+          make_shared<string>())
       );
 
   ASSERT_EQ(
       "ecs-intl.cn-hangzhou.aliyuncs.com",
-      Client::getEndpointRules(
-          new string("ecs"),
-          new string("cn-hangzhou"),
-          new string("regional"),
-          new string("intl"),
-          nullptr)
+      Alibabacloud_EndpointUtil::Client::getEndpointRules(
+          make_shared<string>("ECS"),
+          make_shared<string>("cn-hangzhou"),
+          make_shared<string>("regional"),
+          make_shared<string>("intl"),
+          make_shared<string>())
   );
 
   ASSERT_EQ(
       "ecs.aliyuncs.com",
-      Client::getEndpointRules(
-          new string("ecs"),
-          new string("cn-hangzhou"),
-          new string("central"),
-          new string(""),
-          nullptr)
+      Alibabacloud_EndpointUtil::Client::getEndpointRules(
+          make_shared<string>("ecs"),
+          make_shared<string>("cn-hangzhou"),
+          make_shared<string>("central"),
+          make_shared<string>(""),
+          make_shared<string>())
   );
 
   ASSERT_EQ(
       "ecs.aliyuncs.com",
-      Client::getEndpointRules(
-          new string("ecs"),
-          new string("cn-hangzhou"),
-          new string("central"),
-          new string("public"),
-          nullptr)
+      Alibabacloud_EndpointUtil::Client::getEndpointRules(
+          make_shared<string>("ecs"),
+          make_shared<string>("cn-hangzhou"),
+          make_shared<string>("central"),
+          make_shared<string>("Public"),
+          make_shared<string>())
   );
 
   ASSERT_EQ(
       "ecs-intl.aliyuncs.com",
-      Client::getEndpointRules(
-          new string("ecs"),
-          new string("cn-hangzhou"),
-          new string("central"),
-          new string("intl"),
-          nullptr)
+      Alibabacloud_EndpointUtil::Client::getEndpointRules(
+          make_shared<string>("ecs"),
+          make_shared<string>("cn-hangzhou"),
+          make_shared<string>("central"),
+          make_shared<string>("intl"),
+          make_shared<string>())
   );
 }

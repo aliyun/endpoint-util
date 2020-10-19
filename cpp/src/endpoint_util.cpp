@@ -1,7 +1,8 @@
 #include <alibabacloud/endpoint_util.hpp>
-#include <boost/any.hpp>
+#include <iostream>
+#include <memory>
+#include <algorithm>
 
-using namespace Alibabacloud_endpoint_util;
 using namespace std;
 
 
@@ -11,20 +12,19 @@ string lowercase(string str) {
   return str;
 }
 
-string Alibabacloud_endpoint_util::Client::getEndpointRules(
-    string *product,
-    string *regionId,
-    string *endpointType,
-    string *network,
-    string *suffix)
-{
-  string productVal = nullptr == product ? "" : *product;
-  string regionIdVal = nullptr == regionId ? "" : *regionId;
-  string endpointTypeVal = nullptr == endpointType ? "" : *endpointType;
-  string networkVal = nullptr == network ? "" : *network;
-  string result = "";
 
-  if (!networkVal.empty() && networkVal != "public") {
+string Alibabacloud_EndpointUtil::Client::getEndpointRules(shared_ptr<string> product,
+                                                           shared_ptr<string> regionId,
+                                                           shared_ptr<string> endpointType,
+                                                           shared_ptr<string> network,
+                                                           shared_ptr<string> suffix) {
+  string productVal = !product ? "" : *product;
+  string regionIdVal = !regionId ? "" : *regionId;
+  string endpointTypeVal = !endpointType ? "" : *endpointType;
+  string networkVal = !network ? "" : *network;
+  string result;
+
+  if (!networkVal.empty() && lowercase(networkVal) != "public") {
     productVal.append("-");
   } else {
     networkVal = "";
@@ -34,14 +34,15 @@ string Alibabacloud_endpoint_util::Client::getEndpointRules(
     if (regionIdVal.empty()) {
       throw runtime_error("RegionId is empty, please set a valid RegionId");
     }
-    result.append(lowercase(productVal))
-          .append(networkVal + ".")
-          .append(regionIdVal)
-          .append(".aliyuncs.com");
+    result.append(productVal)
+        .append(networkVal + ".")
+        .append(regionIdVal)
+        .append(".aliyuncs.com");
   } else {
-    result.append(lowercase(productVal))
-          .append(networkVal)
-          .append(".aliyuncs.com");
+    result.append(productVal)
+        .append(networkVal)
+        .append(".aliyuncs.com");
   }
-  return result;
+  return lowercase(result);
 }
+

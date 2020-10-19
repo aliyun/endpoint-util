@@ -1,7 +1,7 @@
 [English](/README.md) | 简体中文
 
 
-# Alibabacloud Endpoint Util SDK for C++
+# Darabonba SDK Core for C++
 
 ![](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
 
@@ -11,8 +11,8 @@
 ### Linux
 
 ```bash
-git clone https://github.com/alibabacloud-sdk-cpp/endpoint_util.git
-cd endpoint_util
+git clone https://github.com/alibabacloud-sdk-cpp/endpoint-util.git
+cd endpoint-util
 sh scripts/install.sh
 ```
 
@@ -21,7 +21,7 @@ sh scripts/install.sh
 1. 使用 git-bash 执行以下命令，从 Github 克隆源码
 
   ```bash
-  git clone https://github.com/alibabacloud-sdk-cpp/endpoint_util.git
+  git clone https://github.com/alibabacloud-sdk-cpp/endpoint-util.git
   ```
 2. 使用 Visual Studio 进行编译:
   * 在根目录下创建 `cmake_build` 目录
@@ -39,7 +39,7 @@ sh scripts/install.sh
 
 ## 问题
 
-[提交 Issue](https://github.com/alibabacloud-sdk-cpp/endpoint_util/issues/new/choose)，不符合指南的问题可能会立即关闭。
+[提交 Issue](https://github.com/alibabacloud-sdk-cpp/endpoint-util/issues/new/choose)，不符合指南的问题可能会立即关闭。
 
 ## 相关
 
@@ -55,6 +55,6 @@ sh scripts/install.sh
 Copyright (c) 2009-present, Alibaba Cloud All rights reserved.
 
 [open-api]: https://api.aliyun.com
-[latest-release]: https://github.com/alibabacloud-sdk-cpp/endpoint_util/releases
+[latest-release]: https://github.com/alibabacloud-sdk-cpp/endpoint-util/releases
 [console]: https://home.console.aliyun.com
 [aliyun]: https://www.aliyun.com

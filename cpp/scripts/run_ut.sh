@@ -2,7 +2,7 @@
 
 basepath=$(cd `dirname $0`/../; pwd)
 
-cd $basepath/
+cd "$basepath/" || exit
 
 main() {
     mkdir -p cmake_build/
@@ -13,7 +13,7 @@ main() {
     cmake --build . || {
         error_exit "Failed to make."
     }
-    ./tests_alibabacloud_rpcutil || {
+    ./tests_alibabacloud_endpoint_util || {
         error_exit "Failed to test."
     }
 }
