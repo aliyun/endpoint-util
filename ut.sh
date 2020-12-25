@@ -78,6 +78,20 @@ function run_python {
   upload_codecov_report python python
 }
 
+function run_python2 {
+  #env
+  export PYTHONPATH=$PYTHONPATH:`pwd`/python2
+  echo $PYTHONPATH
+  # install
+  cd python2 || return 126
+  pip install coverage || return 126
+  pip install alibabacloud-tea-py2
+
+  coverage run --source="./alibabacloud_endpoint_util" -m pytest tests/ || return 126
+  cd ../
+  upload_codecov_report python2 python2
+}
+
 function run_cpp {
   #env
   export CPLUS_INCLUDE_PATH="/usr/local/include/:/usr/include/jsoncpp/:/usr/lib/"
@@ -114,6 +128,10 @@ elif [ "$lang" == "python" ]
 then
   echo "run python"
   run_python
+elif [ "$lang" == "python2" ]
+then
+  echo "run python2"
+  run_python2
 elif [ "$lang" == "ts" ]
 then
   echo "run ts"
