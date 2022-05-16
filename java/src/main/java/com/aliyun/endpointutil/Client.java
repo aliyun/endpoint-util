@@ -7,7 +7,7 @@ public class Client {
 
     public static String getEndpointRules(String product, String regionId, String endpointType, String netWork, String suffix) {
         String result;
-        if (!StringUtils.isEmpty(netWork) && netWork != "public") {
+        if (!StringUtils.isEmpty(netWork) && !"public".equals(netWork)) {
             netWork = "-" + netWork;
         } else {
             netWork = "";
@@ -17,7 +17,7 @@ public class Client {
         } else {
             suffix = "-" + suffix;
         }
-        if (endpointType == "regional") {
+        if ("regional".equals(endpointType)) {
             if (StringUtils.isEmpty(regionId)) {
                 throw new RuntimeException("RegionId is empty, please set a valid RegionId");
             }
