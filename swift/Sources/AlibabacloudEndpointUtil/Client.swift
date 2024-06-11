@@ -29,4 +29,8 @@ open class Client {
         }
         return endpoint
     }
+
+    public static func getRegionId(_ product: String?, _ endpoint: String?, _ endpointType: String?, _ network: String?, _ suffix: String?) throws -> String {
+        throw Tea.TeaError("Un-implemented")
+    }
 }

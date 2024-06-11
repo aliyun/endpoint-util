@@ -21,3 +21,17 @@ class Client:
         else:
             result = result.replace("<network>", "-"+network)
         return result
+
+    @staticmethod
+    def get_region_id(
+        product: str,
+        endpoint: str,
+        endpoint_type: str,
+        network: str,
+        suffix: str,
+    ) -> str:
+        """
+        Get regionId according to productId, endpoint, endpointType, network and suffix
+        @return: regionId
+        """
+        raise Exception('Un-implemented')

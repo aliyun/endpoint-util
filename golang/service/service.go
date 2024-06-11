@@ -39,3 +39,12 @@ func GetEndpointRules(product, regionId, endpointType, network, suffix *string) 
 	}
 	return _result, nil
 }
+
+// Description:
+// 
+// Get regionId according to productId, endpoint, endpointType, network and suffix
+// 
+// @return regionId
+func GetRegionId (product *string, endpoint *string, endpointType *string, network *string, suffix *string) (_result *string, _err error) {
+	panic("No Support!")
+}

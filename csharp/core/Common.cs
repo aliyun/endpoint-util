@@ -51,5 +51,14 @@ namespace AlibabaCloud.EndpointUtil
 
             return result;
         }
+
+        /**
+         * Get regionId according to productId, endpoint, endpointType, network and suffix
+         * @return regionId
+         */
+        public static string GetRegionId(string product, string endpoint, string endpointType, string network, string suffix)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

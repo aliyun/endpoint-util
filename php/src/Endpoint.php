@@ -58,4 +58,17 @@ class Endpoint
     {
         return str_replace('<' . $tag . '>', $replace, $str);
     }
+
+    /**
+     * Get regionId according to productId, endpoint, endpointType, network and suffix
+     * @param string $product
+     * @param string $endpoint
+     * @param string $endpointType
+     * @param string $network
+     * @param string $suffix
+     * @return string regionId
+     */
+    public static function getRegionId($product, $endpoint, $endpointType, $network, $suffix){
+        throw new Exception('Un-implemented');
+    }
 }

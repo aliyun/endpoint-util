@@ -21,7 +21,7 @@
     "nyc": "^15.0.1"
   },
   "dependencies": {
-    "@alicloud/tea-typescript": "^1.5.1",
+    "@alicloud/tea-typescript": "^1.7.1",
     "kitx": "^2.0.0"
   },
   "files": [

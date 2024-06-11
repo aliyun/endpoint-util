@@ -27,4 +27,12 @@ public class Client {
         }
         return result;
     }
+
+    /**
+     * Get regionId according to productId, endpoint, endpointType, network and suffix
+     * @return regionId
+     */
+    public static String getRegionId(String product, String endpoint, String endpointType, String network, String suffix) throws Exception {
+
+    }
 }

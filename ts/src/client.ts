@@ -31,4 +31,12 @@ export default class Client {
     return result;
   }
 
+  /**
+   * Get regionId according to productId, endpoint, endpointType, network and suffix
+   * @return regionId
+   */
+  static getRegionId(product: string, endpoint: string, endpointType: string, network: string, suffix: string): string {
+    throw new Error('Un-implemented!');
+  }
+
 }
