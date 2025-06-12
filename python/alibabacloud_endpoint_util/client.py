@@ -1,6 +1,3 @@
-from Tea.exceptions import RequiredArgumentException
-
-
 class Client:
     @staticmethod
     def get_endpoint_rules(product, region_id, endpoint_type, network, suffix=None):

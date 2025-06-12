@@ -3,9 +3,6 @@
  * Get endpoint
  * @return string
  */
-import { Readable } from 'stream';
-import * as $tea from '@alicloud/tea-typescript';
-
 
 export default class Client {
 

@@ -1,13 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.endpointutil;
 
-import com.aliyun.tea.utils.StringUtils;
-
 public class Client {
 
     public static String getEndpointRules(String product, String regionId, String endpointType, String netWork, String suffix) {
         String result;
-        if (!StringUtils.isEmpty(netWork) && !"public".equals(netWork)) {
+        if (!isEmpty(netWork) && !"public".equals(netWork)) {
             netWork = "-" + netWork;
         } else {
             netWork = "";
@@ -18,7 +16,7 @@ public class Client {
             suffix = "-" + suffix;
         }
         if ("regional".equals(endpointType)) {
-            if (StringUtils.isEmpty(regionId)) {
+            if (isEmpty(regionId)) {
                 throw new RuntimeException("RegionId is empty, please set a valid RegionId");
             }
             result = String.format("%s%s%s.%s.aliyuncs.com", product, suffix, netWork, regionId);
@@ -26,5 +24,9 @@ public class Client {
             result = String.format("%s%s%s.aliyuncs.com", product, suffix, netWork);
         }
         return result;
+    }
+    
+    private static boolean isEmpty(final CharSequence cs) {
+        return cs == null || cs.length() == 0;
     }
 }
