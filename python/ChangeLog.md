@@ -1,3 +1,6 @@
+### 2025-06-12 Version 0.0.4
+* Delete unnecessary dependencies.
+  
 ### 2020-09-16 Version 0.0.3
 * Improve exception message.
 
