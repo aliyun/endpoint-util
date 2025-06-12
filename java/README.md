@@ -12,11 +12,6 @@ English | [简体中文](README-CN.md)
     <artifactId>endpoint-util</artifactId>
     <version>Use the version shown in the maven badge</version>
 </dependency>
-<dependency>
-    <groupId>com.aliyun</groupId>
-    <artifactId>tea</artifactId>
-    <version>[1.0.5, 2.0.0)</version>
-</dependency>
 ```
 
 ## Issues

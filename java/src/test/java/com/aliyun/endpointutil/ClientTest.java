@@ -6,7 +6,6 @@ import org.junit.Test;
 public class ClientTest {
     @Test
     public void getEndpointRulesTest() throws Exception {
-        new Client();
         Assert.assertEquals("cs.region.aliyuncs.com", Client.getEndpointRules("cs", "region",
                 "regional", null, null));
         Assert.assertEquals("cs-suffix-test.aliyuncs.com", Client.getEndpointRules("cs", "test",
