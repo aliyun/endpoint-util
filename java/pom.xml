@@ -4,7 +4,7 @@
 
     <groupId>com.aliyun</groupId>
     <artifactId>endpoint-util</artifactId>
-    <version>0.0.7</version>
+    <version>0.0.8</version>
     <packaging>jar</packaging>
     <name>endpoint-util</name>
     <description>Aliyun Endpoint Util for Java
