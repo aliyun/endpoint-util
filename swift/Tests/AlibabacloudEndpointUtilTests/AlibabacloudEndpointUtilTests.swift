@@ -37,7 +37,4 @@ final class ClientTests: XCTestCase {
         XCTAssertEqual("ecs-test-intl.aliyuncs.com", endpoint)
     }
 
-    static var allTests = [
-        ("testGetEndpointRules", testGetEndpointRules),
-    ]
 }
